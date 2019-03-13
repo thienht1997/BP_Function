@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kiem tra so nguyen to</title>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+	let input = parseInt(prompt("Nhap vao 1 so"));
+
+	function isPrime(number) {
+		if(number < 2) {
+			return false;
+		}else {
+			for(let i=2; i<number; i++) {
+				if(number%i==0) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	if ( isPrime(input)){
+	confirm(input + " la so nguyen to");}
+	else{
+	confirm(input + " khong phai la so nguyen to");
+}
+</script>
+</html>

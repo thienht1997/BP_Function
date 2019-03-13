@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kiem tra doi xung</title>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+
+    var str = prompt("Nhap vao 1 chuoi: ")
+    var arrStr = str.split("");
+    
+    document.write( 'Chuoi: "' + arrStr + '"  :' );
+    document.write( isPalindrome(arrStr) ? " Ðoi xung" : " Khong doi xung" );
+
+
+    function isPalindrome(arrStr){
+        if(arrStr.length < 2){
+            return true;
+        }
+        else if(arrStr[0] === arrStr[arrStr.length - 1]){
+            arrStr.pop();
+            arrStr.shift();
+            return isPalindrome(arrStr);
+        }
+        else return false;
+
+    }
+</script>
+</html>
